@@ -4,9 +4,6 @@ import styles from './Board.module.css';
 
 class Board extends React.Component {
 
-    numRows = 4;
-    numColumns = 4;
-
     getRow(cardNumbers) {
         return (
             <div className={styles.row}>
