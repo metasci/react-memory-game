@@ -1,0 +1,14 @@
+/* Nick Beaudoin */
+
+body {
+    /* image created using GIMP */
+    background: url(../images/background.png) no-repeat center fixed;
+    background-size: cover;
+}
+
+
+
+.number {
+    height: 100%;
+    width: 100%;
+}

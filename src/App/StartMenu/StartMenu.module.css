@@ -1,0 +1,31 @@
+.menu {
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+.menu img {
+    height: 50vh;
+}
+/* mobile devices up to ipad pro */
+@media screen and (max-width: 1300px) {
+    .menu img {
+        height: 45vh;
+    }    
+}
+
+.btn {
+    background-color: #272066;
+    box-shadow: 0px 0px 5px .5px rgba(0,0,0,0.75);
+    cursor: pointer;
+    color: white;    
+    display: block;
+    font-family: Courier New, Courier, monospace;
+    font-size: 40px;
+    height: 50px;
+    margin: auto;
+    width: 150px;
+}
+.btn:active {
+    background-color: #181442;
+    box-shadow: 0px 0px .25px .5px rgba(0,0,0,0.75);    
+}

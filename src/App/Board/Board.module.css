@@ -1,0 +1,36 @@
+.board {
+    background-color: #95BBA4;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    
+    padding: 10px;
+    position: relative;
+    margin: auto;  
+    
+    top: 10vh;
+    width: max-content;    
+}
+
+/* mobile devices */
+@media screen and (max-width: 800px) {
+    .board {
+        top: 20vh;
+    }    
+}
+
+.row {
+    display: table-row;
+}
+
+/* created for margin space */
+.box {
+    background-color: #95BBA4;
+    display: table-cell;
+    height: 20vmin;
+    width: 20vmin;
+
+    /* 3d effects */
+    position: relative;
+    perspective: 800;
+    -webkit-perspective: 800;
+}
