@@ -4,13 +4,29 @@ import EndMenu from './EndMenu/EndMenu';
 import Board from './Board/Board';
 
 class App extends React.Component {
+
+
+  constructor(props) {
+    super(props);
+
+    this.play = this.play.bind(this);
+    this.state = {
+      phase: 'start',
+      cardNums: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]  
+    };
+  }
+  // todo - is this where the game state should be?
+
+  play() {
+    this.setState({phase: 'play'})
+  }
   
   render() {
     return (
       <div >
-        <Board cardNumbers={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]} />
-        <StartMenu />
-        <EndMenu />
+        {this.state.phase === 'play' && <Board cardNumbers={this.state.cardNums} />}
+        {this.state.phase === 'start' && <StartMenu play={this.play}/>}
+        {this.state.phase === 'end' && <EndMenu />}
       </div>
     );
   }

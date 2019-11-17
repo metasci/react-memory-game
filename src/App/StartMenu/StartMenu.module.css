@@ -2,6 +2,7 @@
     position: relative;
     margin: auto;
     text-align: center;
+    transition: opacity 1s;
 }
 .menu img {
     height: 50vh;
@@ -11,6 +12,11 @@
     .menu img {
         height: 45vh;
     }    
+}
+
+.hide {
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .btn {
