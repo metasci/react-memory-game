@@ -30,17 +30,24 @@ class App extends React.Component {
   }
 
   end() {
-    this.transition('end');
+    this.transition('end')
+      .then(() => {
+        setTimeout(() => this.transition('start'), 3000);
+      });
   }
 
   transition(phase) {
     this.setState({ visibility: styles.hide });
-    setTimeout(() => {
-      this.setState({
-        phase: phase,
-        visibility: styles.show
-      });
-    }, 1000);
+
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        this.setState({
+          phase: phase,
+          visibility: styles.show
+        });
+        setTimeout(resolve, 1000);
+      }, 1000);
+    });
   }
   
   render() {
